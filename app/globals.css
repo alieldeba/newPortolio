@@ -1,0 +1,24 @@
+/* Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Additional Styles */
+
+/* Welcome Page */
+.welcome {
+  background-color: white;
+  background-image: url(/welcome.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.learn-more:hover button {
+  margin-left: 20px;
+}
+
+@media screen and (width <= 600px) {
+  .welcome {
+    background-image: url(/welcomemobile.svg);
+  }
+}

@@ -1,0 +1,16 @@
+        <svg
+          width="16"
+          height="10"
+          viewBox="0 0 19 14"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M11.93 0.929993L18 6.99999L11.93 13.07M1 6.99999H17.83"
+            stroke="black"
+            stroke-width="1.5"
+            stroke-miterlimit="10"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
