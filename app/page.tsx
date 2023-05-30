@@ -8,9 +8,9 @@ export default function Home() {
   return (
     <>
       <main
-        className={`welcome container m-auto h-screen flex flex-col items-center justify-center gap-16 transition-all ${
-          learnMore ? "w-0 h-0 overflow-hidden" : ""
-        }`}
+        className={`welcome ${
+          learnMore ? "h-0 w-0" : "h-screen"
+        } container m-auto flex flex-col items-center justify-center gap-16 transition-all overflow-hidden`}
       >
         <div className="flex flex-col md:flex-row gap-10">
           <h1 className="text-5xl bg-[#fef9c3] p-2 rounded font-black">
