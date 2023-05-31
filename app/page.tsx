@@ -7,7 +7,7 @@ export default function Home() {
   const [pageIndex, setPageIndex] = useState(1);
 
   return (
-    <div className="w-full h-screen overflow-hidden">
+    <div className="w-full h-screen">
       <main
         className={`container m-auto transition-all md:pt-[80px] ${
           pageIndex !== 1 ? "left-[-100vw] w-0 h-0" : "w-full h-screen"
@@ -43,7 +43,7 @@ export default function Home() {
               </button>
             </div>
           </div>
-          <Image src="/ali.png" width={350} height={350} alt="ali" />
+          <Image src="/ali.png" width={300} height={300} alt="ali" />
         </div>
       </main>
       <section
