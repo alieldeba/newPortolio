@@ -4,96 +4,105 @@ import Image from "next/image";
 import { useState } from "react";
 
 export default function Home() {
-  const [pageIndex, setpageIndex] = useState(1);
+  const [pageIndex, setPageIndex] = useState(1);
 
   return (
-    <>
+    <div className="w-full h-screen overflow-hidden">
       <main
-        className={`welcome ${
-          pageIndex !== 1 ? "h-0 w-0" : "h-screen"
-        } container m-auto flex flex-col items-center justify-center gap-16 transition-all overflow-hidden`}
+        className={`container m-auto transition-all ${
+          pageIndex !== 1 ? "left-[-100vw] w-0 h-0" : "w-full h-screen"
+        }`}
       >
-        <div className="flex flex-col md:flex-row gap-10">
-          <h1 className="text-5xl bg-[#fef9c3] p-2 rounded font-black">
-            Intuitive.
-          </h1>
-          <h1 className="text-5xl bg-[#dcfce7] p-2 rounded font-black w-fit">
-            Useful.
-          </h1>
-          <h1 className="text-5xl bg-[#fce7f3] p-2 rounded font-black">
-            Beautiful.
-          </h1>
+        <h1 className="text-center text-3xl underline">Hi I’am Ali 👋</h1>
+        <div className="flex flex-col-reverse md:flex-row justify-between items-center mt-12 md:mt-24 gap-5">
+          <div className="flex flex-col gap-6 w-fit md:w-[610px]">
+            <h3 className="text-3xl md:text-5xl">
+              Junior Frontend Web Developer.
+            </h3>
+            <p>
+              Front-End developer with a love for learning and creating unique
+              projects, I am constantly seeking out new challenges and
+              opportunities to grow and improve. With a passion for what I do
+              and a drive to always be better, I am excited to bring my skills
+              and enthusiasm to any team.
+            </p>
+            <div
+              className="learn-more cursor-pointer"
+              onClick={() => setPageIndex(pageIndex + 1)}
+            >
+              <button className="bg-[#0075FF] rounded-[50px] py-2 px-5 flex gap-2 items-center transition-all text-white">
+                Learn More
+                <Image
+                  src="/rightarrow.svg"
+                  alt="right arrow"
+                  width={14}
+                  height={2}
+                />
+              </button>
+            </div>
+          </div>
+          <Image src="/ali.png" width={350} height={350} alt="ali" />
         </div>
-        <div className="text-center">
-          <p>These are the properties a web app should have.</p>
-          <p>I am Ali Eldeba, a 16 year old web developer.</p>
-        </div>
-        <div
-          className="learn-more cursor-pointer"
-          onClick={() => setpageIndex(pageIndex + 1)}
-        >
-          <button className="bg-[#D2E7FF] rounded-[50px] py-2 px-5 flex gap-2 items-center transition-all">
-            Next
-            <Image
-              src="/rightarrow.svg"
-              alt="right arrow"
-              width={13}
-              height={10}
-            />
-          </button>
+        <div className="flex items-center gap-1 absolute bottom-10 left-1/2 -translate-x-1/2">
+          <div
+            className={`w-3 h-3 rounded-full ${
+              pageIndex === 1 ? "bg-[#0075FF]" : "bg-[#D8D8D8]"
+            }`}
+            onClick={() => setPageIndex(1)}
+          ></div>
+          <div
+            className={`w-3 h-3 rounded-full ${
+              pageIndex === 2 ? "bg-[#0075FF]" : "bg-[#D8D8D8]"
+            }`}
+            onClick={() => setPageIndex(2)}
+          ></div>
+          <div
+            className={`w-3 h-3 rounded-full ${
+              pageIndex === 3 ? "bg-[#0075FF]" : "bg-[#D8D8D8]"
+            }`}
+            onClick={() => setPageIndex(3)}
+          ></div>
+          <div
+            className={`w-3 h-3 rounded-full ${
+              pageIndex === 4 ? "bg-[#0075FF]" : "bg-[#D8D8D8]"
+            }`}
+            onClick={() => setPageIndex(4)}
+          ></div>
         </div>
       </main>
-      <main
-        className={`welcome ${
-          pageIndex === 2 ? "h-screen w-full" : "h-0 w-0"
-        } container m-auto flex flex-col items-center justify-center gap-16 transition-all overflow-hidden`}
+      <section
+        className={`container m-auto transition-all ${
+          pageIndex === 2 ? "block right-0 w-full h-full" : "w-0 h-0 hidden"
+        }`}
       >
-        <div className="flex flex-col md:flex-row gap-10">
-          <h1 className="text-5xl bg-[#fef9c3] p-2 rounded font-black">
-            Chess Player.
-          </h1>
-          <h1 className="text-5xl bg-[#dcfce7] p-2 rounded font-black w-fit">
-            Gamer.
-          </h1>
-          <h1 className="text-5xl bg-[#fce7f3] p-2 rounded font-black">
-            Handsome.
-          </h1>
-        </div>
-        <div className="text-center">
-          <p>These are the properties a web app should have.</p>
-          <p>I am Ali Eldeba, a 16 year old web developer.</p>
-        </div>
-        <div className="flex flex-row-reverse gap-5 width-full justify-center">
+        <h1>Hello Again</h1>
+        <div className="flex items-center gap-1 absolute bottom-10 left-1/2 -translate-x-1/2">
           <div
-            className="learn-more cursor-pointer"
-            onClick={() => setpageIndex(pageIndex + 1)}
-          >
-            <button className="bg-[#D2E7FF] rounded-[50px] py-2 px-5 flex gap-2 items-center transition-all">
-              Next
-              <Image
-                src="/rightarrow.svg"
-                alt="right arrow"
-                width={13}
-                height={10}
-              />
-            </button>
-          </div>
+            className={`w-3 h-3 rounded-full ${
+              pageIndex === 1 ? "bg-[#0075FF]" : "bg-[#D8D8D8]"
+            }`}
+            onClick={() => setPageIndex(1)}
+          ></div>
           <div
-            className="learn-more cursor-pointer"
-            onClick={() => setpageIndex(pageIndex - 1)}
-          >
-            <button className="bg-[#D2E7FF] rounded-[50px] py-2 px-5 flex gap-2 items-center transition-all">
-              <Image
-                src="/leftarrow.svg"
-                alt="right arrow"
-                width={16}
-                height={10}
-              />
-              Back
-            </button>
-          </div>
+            className={`w-3 h-3 rounded-full ${
+              pageIndex === 2 ? "bg-[#0075FF]" : "bg-[#D8D8D8]"
+            }`}
+            onClick={() => setPageIndex(2)}
+          ></div>
+          <div
+            className={`w-3 h-3 rounded-full ${
+              pageIndex === 3 ? "bg-[#0075FF]" : "bg-[#D8D8D8]"
+            }`}
+            onClick={() => setPageIndex(3)}
+          ></div>
+          <div
+            className={`w-3 h-3 rounded-full ${
+              pageIndex === 4 ? "bg-[#0075FF]" : "bg-[#D8D8D8]"
+            }`}
+            onClick={() => setPageIndex(4)}
+          ></div>
         </div>
-      </main>
-    </>
+      </section>
+    </div>
   );
 }
