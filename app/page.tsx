@@ -43,32 +43,6 @@ export default function Home() {
           </div>
           <Image src="/ali.png" width={350} height={350} alt="ali" />
         </div>
-        <div className="flex items-center gap-1 absolute bottom-10 left-1/2 -translate-x-1/2">
-          <div
-            className={`w-3 h-3 rounded-full ${
-              pageIndex === 1 ? "bg-[#0075FF]" : "bg-[#D8D8D8]"
-            }`}
-            onClick={() => setPageIndex(1)}
-          ></div>
-          <div
-            className={`w-3 h-3 rounded-full ${
-              pageIndex === 2 ? "bg-[#0075FF]" : "bg-[#D8D8D8]"
-            }`}
-            onClick={() => setPageIndex(2)}
-          ></div>
-          <div
-            className={`w-3 h-3 rounded-full ${
-              pageIndex === 3 ? "bg-[#0075FF]" : "bg-[#D8D8D8]"
-            }`}
-            onClick={() => setPageIndex(3)}
-          ></div>
-          <div
-            className={`w-3 h-3 rounded-full ${
-              pageIndex === 4 ? "bg-[#0075FF]" : "bg-[#D8D8D8]"
-            }`}
-            onClick={() => setPageIndex(4)}
-          ></div>
-        </div>
       </main>
       <section
         className={`container m-auto transition-all ${
@@ -76,7 +50,8 @@ export default function Home() {
         }`}
       >
         <h1>Hello Again</h1>
-        <div className="flex items-center gap-1 absolute bottom-10 left-1/2 -translate-x-1/2">
+      </section>
+        <div className="flex items-center gap-1 absolute bottom-10 left-1/2 -translate-x-1/2 z-10">
           <div
             className={`w-3 h-3 rounded-full ${
               pageIndex === 1 ? "bg-[#0075FF]" : "bg-[#D8D8D8]"
@@ -102,7 +77,6 @@ export default function Home() {
             onClick={() => setPageIndex(4)}
           ></div>
         </div>
-      </section>
     </div>
   );
 }
