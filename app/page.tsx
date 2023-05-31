@@ -17,7 +17,7 @@ export default function Home() {
           Hi I’am Ali 👋
         </h1>
         <div className="flex flex-col-reverse md:flex-row justify-between items-center mt-12 md:mt-24 gap-5">
-          <div className="flex flex-col gap-6 w-fit md:w-[610px]">
+          <div className="flex flex-col gap-3 w-fit md:w-[610px]">
             <h3 className="text-3xl md:text-5xl">
               Junior Frontend Web Developer.
             </h3>
@@ -53,7 +53,7 @@ export default function Home() {
       >
         <h1>Hello Again</h1>
       </section>
-      <div className="flex items-center gap-1 absolute bottom-10 left-1/2 -translate-x-1/2 z-10">
+      <div className="flex items-center gap-1 absolute bottom-2 md:bottom-10 left-1/2 -translate-x-1/2 z-10">
         <div
           className={`w-3 h-3 rounded-full ${
             pageIndex === 1 ? "bg-[#0075FF]" : "bg-[#D8D8D8]"
