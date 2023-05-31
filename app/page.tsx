@@ -17,7 +17,7 @@ export default function Home() {
           Hi I’am Ali 👋
         </h1>
         <div className="flex flex-col-reverse md:flex-row justify-between items-center mt-12 md:mt-24 gap-5">
-          <div className="flex flex-col gap-3 w-fit md:w-[610px]">
+          <div className="flex flex-col gap-3 md:gap-6 w-fit md:w-[610px]">
             <h3 className="text-3xl md:text-5xl">
               Junior Frontend Web Developer.
             </h3>
