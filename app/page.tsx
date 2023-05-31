@@ -9,11 +9,13 @@ export default function Home() {
   return (
     <div className="w-full h-screen overflow-hidden">
       <main
-        className={`container m-auto transition-all ${
+        className={`container m-auto transition-all md:pt-[80px] ${
           pageIndex !== 1 ? "left-[-100vw] w-0 h-0" : "w-full h-screen"
         }`}
       >
-        <h1 className="text-center text-3xl underline">Hi I’am Ali 👋</h1>
+        <h1 className="text-center text-3xl underline hidden md:block">
+          Hi I’am Ali 👋
+        </h1>
         <div className="flex flex-col-reverse md:flex-row justify-between items-center mt-12 md:mt-24 gap-5">
           <div className="flex flex-col gap-6 w-fit md:w-[610px]">
             <h3 className="text-3xl md:text-5xl">
@@ -45,38 +47,38 @@ export default function Home() {
         </div>
       </main>
       <section
-        className={`container m-auto transition-all ${
+        className={`container m-auto transition-all md:pt-[80px] ${
           pageIndex === 2 ? "block right-0 w-full h-full" : "w-0 h-0 hidden"
         }`}
       >
         <h1>Hello Again</h1>
       </section>
-        <div className="flex items-center gap-1 absolute bottom-10 left-1/2 -translate-x-1/2 z-10">
-          <div
-            className={`w-3 h-3 rounded-full ${
-              pageIndex === 1 ? "bg-[#0075FF]" : "bg-[#D8D8D8]"
-            }`}
-            onClick={() => setPageIndex(1)}
-          ></div>
-          <div
-            className={`w-3 h-3 rounded-full ${
-              pageIndex === 2 ? "bg-[#0075FF]" : "bg-[#D8D8D8]"
-            }`}
-            onClick={() => setPageIndex(2)}
-          ></div>
-          <div
-            className={`w-3 h-3 rounded-full ${
-              pageIndex === 3 ? "bg-[#0075FF]" : "bg-[#D8D8D8]"
-            }`}
-            onClick={() => setPageIndex(3)}
-          ></div>
-          <div
-            className={`w-3 h-3 rounded-full ${
-              pageIndex === 4 ? "bg-[#0075FF]" : "bg-[#D8D8D8]"
-            }`}
-            onClick={() => setPageIndex(4)}
-          ></div>
-        </div>
+      <div className="flex items-center gap-1 absolute bottom-10 left-1/2 -translate-x-1/2 z-10">
+        <div
+          className={`w-3 h-3 rounded-full ${
+            pageIndex === 1 ? "bg-[#0075FF]" : "bg-[#D8D8D8]"
+          }`}
+          onClick={() => setPageIndex(1)}
+        ></div>
+        <div
+          className={`w-3 h-3 rounded-full ${
+            pageIndex === 2 ? "bg-[#0075FF]" : "bg-[#D8D8D8]"
+          }`}
+          onClick={() => setPageIndex(2)}
+        ></div>
+        <div
+          className={`w-3 h-3 rounded-full ${
+            pageIndex === 3 ? "bg-[#0075FF]" : "bg-[#D8D8D8]"
+          }`}
+          onClick={() => setPageIndex(3)}
+        ></div>
+        <div
+          className={`w-3 h-3 rounded-full ${
+            pageIndex === 4 ? "bg-[#0075FF]" : "bg-[#D8D8D8]"
+          }`}
+          onClick={() => setPageIndex(4)}
+        ></div>
+      </div>
     </div>
   );
 }

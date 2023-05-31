@@ -10,7 +10,6 @@ main {
   height: 100%;
   top: 0;
   left: 0;
-  padding-top: 80px;
   overflow: hidden;
 }
 section {
@@ -19,6 +18,5 @@ section {
   height: 0;
   top: 0;
   right: -100vh;
-  padding-top: 80px;
   overflow: hidden;
 }
