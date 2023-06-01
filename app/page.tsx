@@ -13,9 +13,10 @@ export default function Home() {
           pageIndex !== 1 ? "left-[-100vw] w-0 h-0" : "w-full h-screen"
         }`}
       >
-        <h1 className="text-center text-3xl underline hidden md:block">
-          Hi I’am Ali 👋
-        </h1>
+        <div className="text-3xl hidden md:flex items-center gap-2 m-auto absolute left-1/2 -translate-x-1/2">
+          <h1 className="text-center">Hi I’am Ali</h1>
+          <Image src="/wave.gif" alt="wave" width={50} height={5} />
+        </div>
         <div className="flex flex-col-reverse md:flex-row justify-between items-center mt-12 md:mt-24 gap-5">
           <div className="flex flex-col gap-3 md:gap-6 w-fit md:w-[610px]">
             <h3 className="text-3xl md:text-5xl">
@@ -51,9 +52,32 @@ export default function Home() {
           pageIndex === 2 ? "block right-0 w-full h-full" : "w-0 h-0 hidden"
         }`}
       >
-        <h1>Hello Again</h1>
+        <div className="text-center">
+          <h1 className="text-3xl hidden md:block">Skills</h1>
+          <p>All what I have gained in my learning career</p>
+        </div>
       </section>
-      <div className="flex items-center gap-1 absolute bottom-2 md:bottom-10 left-1/2 -translate-x-1/2 z-10">
+      <section
+        className={`container m-auto transition-all md:pt-[80px] ${
+          pageIndex === 3 ? "block right-0 w-full h-full" : "w-0 h-0 hidden"
+        }`}
+      >
+        <div className="text-center">
+          <h1 className="text-3xl hidden md:block">Projects</h1>
+          <p>Best projects that I have made in my career</p>
+        </div>
+      </section>
+      <section
+        className={`container m-auto transition-all md:pt-[80px] ${
+          pageIndex === 4 ? "block right-0 w-full h-full" : "w-0 h-0 hidden"
+        }`}
+      >
+        <div className="text-center">
+          <h1 className="text-3xl hidden md:block">Contact</h1>
+          <p>All my social media accounts and a way to contact me faster</p>
+        </div>
+      </section>
+      <div className="flex items-center gap-1 absolute bottom-1 md:bottom-10 left-1/2 -translate-x-1/2 z-10">
         <div
           className={`w-3 h-3 rounded-full ${
             pageIndex === 1 ? "bg-[#0075FF]" : "bg-[#D8D8D8]"
